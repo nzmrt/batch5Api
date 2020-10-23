@@ -18,6 +18,10 @@ public class TestBase {
     protected RequestSpecification spec01; //cocuklarin  hepsi kullanabilsin diye
     protected RequestSpecification spec02;
     protected RequestSpecification spec03;
+    protected JSONObject jsonBookingDatesBody;
+    protected JSONObject jsonRequestBody;
+    protected  Map<String, String> bookingDatesMap;
+    protected  Map <String, Object> requestBodyMap;
 
     @Before
     public void setUp01(){
@@ -44,14 +48,16 @@ public class TestBase {
 
     }
     protected Response createRequestBodyByJsonObjectClass(){
+      //  JSONObject jsonBookingDatesBody; Post request 2a için bu satırı kullandık
+      //  JSONObject jsonRequestBody;
 
-        JSONObject jsonBookingDatesBody = new JSONObject();
+        jsonBookingDatesBody   = new JSONObject();
 
         jsonBookingDatesBody.put("checkin","2020-05-02");
         jsonBookingDatesBody.put("checkout","2020-05-05");
 
 
-        JSONObject jsonRequestBody = new JSONObject();
+        jsonRequestBody  = new JSONObject();
 
         jsonRequestBody.put("firstname","Hasan");
         jsonRequestBody.put("lastname","Kara");
@@ -74,12 +80,15 @@ public class TestBase {
     }
     protected  Response createRequestBodyByMap(){
 
-        Map<String, String> bookingDatesMap = new HashMap<>();
+       //  Map<String, String> bookingDatesMap; //post request 3a için bu satırı kullandık.
+      //   Map <String, Object> requestBodyMap;
+
+        bookingDatesMap = new HashMap<>();
 
         bookingDatesMap.put("checkin","2020-05-02");
         bookingDatesMap.put("checkout","2020-05-05");
 
-        Map <String, Object> requestBodyMap= new HashMap<>();
+       requestBodyMap= new HashMap<>();
 
         requestBodyMap.put("firstname","Hasan");
         requestBodyMap.put("lastname","Kara");

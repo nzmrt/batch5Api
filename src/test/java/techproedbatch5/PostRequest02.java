@@ -86,6 +86,8 @@ public class PostRequest02 extends TestBase{
 
         softAssert.assertAll();
 
+        //Test bASE de ki methoda geç
+
 
 
 
