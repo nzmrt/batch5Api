@@ -45,7 +45,8 @@ public class PostRequest04 extends TestBase {
     @Test
     public void post01(){
         BookingDates bookingDates =new BookingDates("2020-05-02","2020-05-05");
-        Booking booking =new Booking("Hasan","Kara",123,true,bookingDates,"Wifi");
+        Booking booking =new Booking("Hasan","Kara",123,true,bookingDates,
+                "Wifi");
 
         Response response =given().
                 contentType(ContentType.JSON).
